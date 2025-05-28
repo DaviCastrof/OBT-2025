@@ -208,6 +208,25 @@ let filteredExperiments = [...infoexperiments];
 let currentPage = 1;
 const itemsPerPage = 8;
 
+function setupExperimentClickHandlers() {
+    const blocos = document.querySelectorAll('.bloco');
+    
+    blocos.forEach((bloco, index) => {
+        bloco.addEventListener('click', () => {
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const experimentIndex = startIndex + index;
+            
+            if (experimentIndex < filteredExperiments.length) {
+                const experiment = filteredExperiments[experimentIndex];
+                
+                localStorage.setItem('selectedExperiment', JSON.stringify(experiment));
+                
+                window.location.href = 'onclick.html';
+            }
+        });
+    });
+}
+
 function renderPage() {
     gridContainer.innerHTML = "";
 
@@ -231,6 +250,8 @@ function renderPage() {
 
         gridContainer.appendChild(bloco);
     });
+    
+    setupExperimentClickHandlers();
 }
 
 function updatePagination() {
