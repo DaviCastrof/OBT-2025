@@ -8,21 +8,25 @@
 
 ::-webkit-input-placeholder {
    color: rgb(255, 255, 255);
+   font-size: 1rem;
 }
 
 :-moz-placeholder {
    color: rgb(255, 255, 255);
+   font-size: 1rem;
 }
 
 ::-moz-placeholder {
    color: rgb(255, 255, 255);
+   font-size: 1rem;
 }
 
 :-ms-input-placeholder {  
    color: rgb(255, 255, 255);
+   font-size: 1rem;
 }
 header {
-    height: 10vh;
+    height: 8vh;
     background-color: #475569;
     padding: 1px;
     width: 100%;
@@ -65,7 +69,7 @@ header {
 
 main {
     flex: 1;
-    height: 87vh;
+    height: 89vh;
     padding: 2rem;
     overflow: hidden;
     background-image:  linear-gradient(rgba(0, 0, 0, .7)), url(/assets/images/fundo.jpg);
