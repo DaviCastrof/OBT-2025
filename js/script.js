@@ -157,15 +157,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const itemsPerPage = 8;
 let currentPage = 1;
-const totalPages = Math.ceil(infoexperiments.length / itemsPerPage);
+let filteredExperiments = [...infoexperiments]; // Cópia do array original para filtros
+let totalPages = Math.ceil(filteredExperiments.length / itemsPerPage);
 
 function renderPage(page) {
     const gridContainer = document.querySelector(".grid-container");
     gridContainer.innerHTML = "";
 
     const startIndex = (page - 1) * itemsPerPage;
-    const endIndex = Math.min(startIndex + itemsPerPage, infoexperiments.length);
-    const currentItems = infoexperiments.slice(startIndex, endIndex);
+    const endIndex = Math.min(startIndex + itemsPerPage, filteredExperiments.length);
+    const currentItems = filteredExperiments.slice(startIndex, endIndex);
 
     currentItems.forEach(experiment => {
         const bloco = document.createElement("div");
@@ -183,24 +184,49 @@ function renderPage(page) {
 
         gridContainer.appendChild(bloco);
     });
+
+    // Atualiza o número total de páginas após o filtro
+    totalPages = Math.ceil(filteredExperiments.length / itemsPerPage);
+    updatePagination();
 }
 
 function updatePagination() {
     const pageButtons = document.querySelectorAll(".pagination .page, .pagination .lastpage");
+    
+    // Atualiza quais botões de página são visíveis
     pageButtons.forEach((button, index) => {
-        if (index + 1 === currentPage) {
-            button.classList.add("ativa");
+        if (index < totalPages) {
+            button.style.display = "flex";
+            if (index + 1 === currentPage) {
+                button.classList.add("ativa");
+            } else {
+                button.classList.remove("ativa");
+            }
         } else {
-            button.classList.remove("ativa");
+            button.style.display = "none";
         }
     });
 }
 
+// Função de pesquisa modificada
+function handleSearch() {
+    const searchTerm = document.querySelector("#barraPesquisa").value.toLowerCase();
+    
+    // Filtra todos os experimentos, não apenas os da página atual
+    filteredExperiments = infoexperiments.filter(experiment => 
+        experiment.nome.toLowerCase().includes(searchTerm)
+    );
+
+    // Volta para a primeira página após pesquisar
+    currentPage = 1;
+    renderPage(currentPage);
+}
+
+// Event listeners
 document.querySelector(".control.next").addEventListener("click", () => {
     if (currentPage > 1) {
         currentPage--;
         renderPage(currentPage);
-        updatePagination();
     }
 });
 
@@ -208,7 +234,6 @@ document.querySelector(".control.prev").addEventListener("click", () => {
     if (currentPage < totalPages) {
         currentPage++;
         renderPage(currentPage);
-        updatePagination();
     }
 });
 
@@ -216,10 +241,12 @@ document.querySelectorAll(".pagination .page, .pagination .lastpage").forEach((b
     button.addEventListener("click", () => {
         currentPage = index + 1;
         renderPage(currentPage);
-        updatePagination();
     });
 });
 
+document.querySelector("#barraPesquisa").addEventListener("keyup", handleSearch);
+
+// Inicialização
 window.addEventListener("DOMContentLoaded", () => {
     renderPage(currentPage);
     updatePagination();
