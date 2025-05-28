@@ -304,7 +304,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    width: 50px;
     height: 40px;
     cursor: pointer;
 }
@@ -320,11 +320,20 @@ main {
 }
 
 .pagination .control.prev {
-    margin: 0px 5px
+    border-radius: 0px 5px 5px 0px;
+}
+
+.pagination .control.prev:hover{
+    background-color: rgb(168, 165, 170);
 }
 
 .pagination .control.next {
-    margin-left: 10px;
+    border-radius: 5px 0px 0px 5px;
+    padding-left: 10px;
+}
+
+.pagination .control.next:hover{
+    background-color: rgb(168, 165, 170);
 }
 
 .pagination .lastpage:hover {
@@ -332,7 +341,7 @@ main {
 }
 
 .pagination .lastpage.ativa {
-    background-color: #434e5e;
+    background-color: #2b3440;
     color: rgb(255, 255, 255);
 }
 
