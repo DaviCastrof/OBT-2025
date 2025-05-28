@@ -4,13 +4,15 @@
     box-sizing: border-box;
     color: white;
 }
-body {
+
+main {
     background-image: url(/assets/images/fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
+
 header{
     background-color: #475569;
     padding: 1px;
@@ -69,8 +71,8 @@ header{
 }
 
 .caixa {
-    width: 20vw;
-    height: 20vh;
+    width: 15vw;
+    height: 10vw;
     background-color: #94a3b8;
     border-radius: 5px;
 }
