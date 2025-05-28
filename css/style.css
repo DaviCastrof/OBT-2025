@@ -65,14 +65,14 @@ header{
 .bloco {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 20vw;
 }
 
 .caixa {
-    width: 350px;
-    height: 250px;
-    background-color: grey;
-    border-radius: 15px;
+    width: 20vw;
+    height: 20vh;
+    background-color: #94a3b8;
+    border-radius: 5px;
 }
 
 .texto {
@@ -98,6 +98,7 @@ header{
     height: 40px;
     padding: 0;
     gap: 5px;
+    position: fixed;
 }
 
 .pagination .page {
