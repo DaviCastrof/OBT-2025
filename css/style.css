@@ -126,7 +126,6 @@ main {
     border-radius: 5px;
 }
 
-
 .texto {
     font-size: 1.3rem;
     color: white;
@@ -171,12 +170,14 @@ main {
     height: 25px;
 }
 
-.imagemgrande{
+.imagemgrande {
     background-color: #94a3b8;
     width: auto;
     max-width: 45vw;
     aspect-ratio: 3 / 3;
     border-radius: 10px;
+    background-size: cover;
+    background-position: center;
 }
 
 .infos{
