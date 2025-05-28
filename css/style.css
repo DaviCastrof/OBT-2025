@@ -10,11 +10,11 @@
    color: rgb(255, 255, 255);
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {
    color: rgb(255, 255, 255);
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder {
    color: rgb(255, 255, 255);
 }
 
@@ -97,9 +97,10 @@ main {
 
 .caixa {
     width: 100%;
-
     aspect-ratio: 3 / 2;
     background-color: #94a3b8;
+    background-size: cover;
+    background-position: center;
     border-radius: 5px;
 }
 
@@ -217,7 +218,7 @@ main {
 }
 
 .pagination .page.ativa {
-    background-color: #434e5e;
+    background-color: #2b3440;
     color: rgb(255, 255, 255);
 }
 
@@ -246,6 +247,15 @@ main {
 
 .pagination .control.next {
     margin-left: 10px;
+}
+
+.pagination .lastpage:hover {
+    background-color: rgb(168, 165, 170);
+}
+
+.pagination .lastpage.ativa {
+    background-color: #434e5e;
+    color: rgb(255, 255, 255);
 }
 
 
