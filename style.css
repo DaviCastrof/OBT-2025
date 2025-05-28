@@ -97,7 +97,8 @@ header{
     border-radius: 5px;
     height: 40px;
     padding: 0;
-    gap: 5px;
+    background-color: #475569;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .pagination .page {
@@ -106,10 +107,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    border: 1px solid black;
+    border-left: 1px solid white;
     margin: 0;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 600;
     cursor: pointer;
     transition: .3;
@@ -124,18 +124,19 @@ header{
 }
 .pagination .page.ativa{
     background-color: #b6b8b9;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .pagination .control {
     color: #4a5866;
     font-weight: 600;
     cursor: pointer;
+    width: 40px;
 }
 
 .pagination .control img{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .pagination .control:hover {
@@ -143,11 +144,11 @@ header{
 }
 
 .pagination .control .prev {
-    margin-right: 10px;
+    border-left: 4px solid black;
 }
 
 .pagination .control .next {
-    margin-left: 10px;
+    border-left: 1px solid white;
 }
 
 footer {
