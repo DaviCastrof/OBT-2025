@@ -212,6 +212,20 @@ main {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    gap: 25px;
+}
+
+.passoapasso{
+    background-color: green;
+    height: 30%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.destaque{
+    font-weight: 800;
 }
 
 .pagination-container {
