@@ -160,18 +160,21 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    background-color: #475569;
     border-radius: 5px;
     height: 40px;
     padding: 0;
-    background-color: #475569;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: fixed;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
 }
 
 .pagination .page {
     height: 40px;
-    width: 40px;
+    width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,6 +182,7 @@ main {
     margin: 0;
     color: rgb(255, 255, 255);
     font-weight: 600;
+    font-size: 30px;
     cursor: pointer;
     transition: .3;
     -webkit-transition: .3s;
@@ -186,6 +190,27 @@ main {
     -ms-transition: .3;
     -o-transition: .3;
 }
+
+.pagination .lastpage {
+    height: 40px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .3;
+    -webkit-transition: .3s;
+    -moz-transition: .3;
+    -ms-transition: .3;
+    -o-transition: .3;
+}
+
 
 .pagination .page:hover {
     background-color: rgb(168, 165, 170);
@@ -197,27 +222,30 @@ main {
 }
 
 .pagination .control {
-    color: #4a5866;
-    font-weight: 600;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .pagination .control img {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
 }
 
 .pagination .control:hover {
     color: rgb(10, 10, 10);
 }
 
-.pagination .control .prev {
-    border-left: 4px solid black;
+.pagination .control.prev {
+    margin: 0px 5px
 }
 
-.pagination .control .next {
-    border-left: 1px solid white;
+.pagination .control.next {
+    margin-left: 10px;
 }
 
 
