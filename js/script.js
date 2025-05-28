@@ -1,171 +1,43 @@
 const infoexperiments = [
-    {
-        nome: "Densidade óssea e muscular em microgravidade",
-        intacto: true,
-        imagem: "assets/images/dossosmicro.jpeg"
-    },
-    {
-        nome: "Materiais resistentes à radiação espacial",
-        intacto: false,
-        imagem: "assets/images/matresist.jpg"
-    },
-    {
-        nome: "Comportamento de fluidos em microgravidade",
-        intacto: false,
-        imagem: "assets/images/fluidosmicro.webp"
-    },
-    {
-        nome: "Microrganismos em ambiente extremo",
-        intacto: true,
-        imagem: "assets/images/microextr.png"
-    },
-    {
-        nome: "Crescimento de plantas em microgravidade",
-        intacto: false,
-        imagem: "assets/images/microplanta.jpg"
-    },
-    {
-        nome: "Regeneração de tecidos em microgravidade",
-        intacto: false,
-        imagem: "assets/images/tecidosmicro.jpg"
-    },
-    {
-        nome: "Comunicação por rádio no espaço",
-        intacto: true,
-        imagem: "assets/images/radioespaco.jpg"
-    },
-    {
-        nome: "Cristalização de proteínas em microgravidade",
-        intacto: true,
-        imagem: "assets/images/cristal.jpg"
-    },
-    {
-        nome: "Desempenho de células solares em órbita",
-        intacto: true,
-        imagem: "assets/images/celsolar.jpg"
-    },
-    {
-        nome: "Isolamento térmico de materiais espaciais",
-        intacto: false,
-        imagem: "assets/images/isolamento.jpg"
-    },
-    {
-        nome: "Impressão 3D de peças em microgravidade",
-        intacto: true,
-        imagem: "assets/images/impressao.avif"
-    },
-    {
-        nome: "Eficiência de filtros de ar na ISS",
-        intacto: false,
-        imagem: "assets/images/filtrosar.webp"
-    },
-    {
-        nome: "Monitoramento cardíaco em astronautas",
-        intacto: true,
-        imagem: "assets/images/cardiaco.png"
-    },
-    {
-        nome: "Crescimento bacteriano em microgravidade",
-        intacto: false,
-        imagem: "assets/images/bacteriamicro.jpg"
-    },
-    {
-        nome: "Fotossíntese em ambientes espaciais",
-        intacto: true,
-        imagem: "assets/images/fotossintese.webp"
-    },
-    {
-        nome: "Produção de alimentos em colônias espaciais",
-        intacto: false,
-        imagem: "assets/images/agromarte.jpg"
-    },
-    {
-        nome: "Efeitos da radiação em DNA humano",
-        intacto: true,
-        imagem: "assets/images/raddna.webp"
-    },
-    {
-        nome: "Desempenho de baterias no vácuo",
-        intacto: false,
-        imagem: "assets/images/bacvacuo.jpg"
-    },
-    {
-        nome: "Estudo de combustão em gravidade zero",
-        intacto: false,
-        imagem: "assets/images/comubst.jpg"
-    },
-    {
-        nome: "Controle de temperatura em satélites",
-        intacto: true,
-        imagem: "assets/images/satelite.jpg"
-    },
-    {
-        nome: "Armazenamento de água em microgravidade",
-        intacto: true,
-        imagem: "assets/images/aguamicro.webp"
-    },
-    {
-        nome: "Teste de ligas metálicas espaciais",
-        intacto: false,
-        imagem: "assets/images/ligasmetal.jpg"
-    },
-    {
-        nome: "Desenvolvimento de tecidos cardíacos no espaço",
-        intacto: true,
-        imagem: "assets/images/tecidocardio.jpg"
-    },
-    {
-        nome: "Reações químicas fora da atmosfera",
-        intacto: false,
-        imagem: "assets/images/chemistry.jpg"
-    }
+    { nome: "Densidade óssea e muscular em microgravidade", intacto: true, imagem: "assets/images/dossosmicro.jpeg" },
+    { nome: "Materiais resistentes à radiação espacial", intacto: false, imagem: "assets/images/matresist.jpg" },
+    { nome: "Comportamento de fluidos em microgravidade", intacto: false, imagem: "assets/images/fluidosmicro.webp" },
+    { nome: "Microrganismos em ambiente extremo", intacto: true, imagem: "assets/images/microextr.png" },
+    { nome: "Crescimento de plantas em microgravidade", intacto: false, imagem: "assets/images/microplanta.jpg" },
+    { nome: "Regeneração de tecidos em microgravidade", intacto: false, imagem: "assets/images/tecidosmicro.jpg" },
+    { nome: "Comunicação por rádio no espaço", intacto: true, imagem: "assets/images/radioespaco.jpg" },
+    { nome: "Cristalização de proteínas em microgravidade", intacto: true, imagem: "assets/images/cristal.jpg" },
+    { nome: "Desempenho de células solares em órbita", intacto: true, imagem: "assets/images/celsolar.jpg" },
+    { nome: "Isolamento térmico de materiais espaciais", intacto: false, imagem: "assets/images/isolamento.jpg" },
+    { nome: "Impressão 3D de peças em microgravidade", intacto: true, imagem: "assets/images/impressao.avif" },
+    { nome: "Eficiência de filtros de ar na ISS", intacto: false, imagem: "assets/images/filtrosar.webp" },
+    { nome: "Monitoramento cardíaco em astronautas", intacto: true, imagem: "assets/images/cardiaco.png" },
+    { nome: "Crescimento bacteriano em microgravidade", intacto: false, imagem: "assets/images/bacteriamicro.jpg" },
+    { nome: "Fotossíntese em ambientes espaciais", intacto: true, imagem: "assets/images/fotossintese.webp" },
+    { nome: "Produção de alimentos em colônias espaciais", intacto: false, imagem: "assets/images/agromarte.jpg" },
+    { nome: "Efeitos da radiação em DNA humano", intacto: true, imagem: "assets/images/raddna.webp" },
+    { nome: "Desempenho de baterias no vácuo", intacto: false, imagem: "assets/images/bacvacuo.jpg" },
+    { nome: "Estudo de combustão em gravidade zero", intacto: false, imagem: "assets/images/comubst.jpg" },
+    { nome: "Controle de temperatura em satélites", intacto: true, imagem: "assets/images/satelite.jpg" },
+    { nome: "Armazenamento de água em microgravidade", intacto: true, imagem: "assets/images/aguamicro.webp" },
+    { nome: "Teste de ligas metálicas espaciais", intacto: false, imagem: "assets/images/ligasmetal.jpg" },
+    { nome: "Desenvolvimento de tecidos cardíacos no espaço", intacto: true, imagem: "assets/images/tecidocardio.jpg" },
+    { nome: "Reações químicas fora da atmosfera", intacto: false, imagem: "assets/images/chemistry.jpg" }
 ];
 
-window.addEventListener("DOMContentLoaded", () => {
-    const gridContainer = document.querySelector(".grid-container");
-    
-    gridContainer.innerHTML = "";
+const gridContainer = document.querySelector(".grid-container");
+const searchInput = document.querySelector("#barraPesquisa");
+const pagination = document.querySelector(".pagination");
 
-    infoexperiments.forEach(experiment => {
-        const bloco = document.createElement("div");
-        bloco.className = "bloco";
-
-        bloco.innerHTML = `
-            <div class="caixa" style="background-image: url('${experiment.imagem}')"></div>
-            <div class="texto">${experiment.nome}</div>
-            <div class="${experiment.intacto ? 'intacto' : 'avariado'}">
-                <img class="${experiment.intacto ? 'check' : 'cancel'}" 
-                     src="assets/images/${experiment.intacto ? 'check' : 'cancel'}.png">
-                ${experiment.intacto ? 'intacto' : 'avariado'}
-            </div>
-        `;
-
-        gridContainer.appendChild(bloco);
-    });
-
-    const searchInput = document.querySelector("#barraPesquisa");
-    searchInput.addEventListener("keyup", (event) => {
-        const searchTerm = event.target.value.toLowerCase();
-        const blocos = document.querySelectorAll(".bloco");
-
-        blocos.forEach(bloco => {
-            const texto = bloco.querySelector(".texto").textContent.toLowerCase();
-            bloco.style.display = texto.includes(searchTerm) ? "flex" : "none";
-        });
-    });
-});
-
-const itemsPerPage = 8;
+let filteredExperiments = [...infoexperiments];
 let currentPage = 1;
-let filteredExperiments = [...infoexperiments]; // Cópia do array original para filtros
-let totalPages = Math.ceil(filteredExperiments.length / itemsPerPage);
+const itemsPerPage = 8;
 
-function renderPage(page) {
-    const gridContainer = document.querySelector(".grid-container");
+function renderPage() {
     gridContainer.innerHTML = "";
 
-    const startIndex = (page - 1) * itemsPerPage;
-    const endIndex = Math.min(startIndex + itemsPerPage, filteredExperiments.length);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
     const currentItems = filteredExperiments.slice(startIndex, endIndex);
 
     currentItems.forEach(experiment => {
@@ -184,70 +56,69 @@ function renderPage(page) {
 
         gridContainer.appendChild(bloco);
     });
-
-    // Atualiza o número total de páginas após o filtro
-    totalPages = Math.ceil(filteredExperiments.length / itemsPerPage);
-    updatePagination();
 }
 
 function updatePagination() {
-    const pageButtons = document.querySelectorAll(".pagination .page, .pagination .lastpage");
+    pagination.innerHTML = `
+        <div class="control next"><img src="assets/images/esquerda.png"></div>
+    `;
+
+    const totalPages = Math.ceil(filteredExperiments.length / itemsPerPage);
+
     
-    // Atualiza quais botões de página são visíveis
-    pageButtons.forEach((button, index) => {
-        if (index < totalPages) {
-            button.style.display = "flex";
-            if (index + 1 === currentPage) {
-                button.classList.add("ativa");
-            } else {
-                button.classList.remove("ativa");
-            }
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement("div");
+        if (i === totalPages) {
+            pageButton.className = `page lastpage ${currentPage === i ? 'ativa' : ''}`;
         } else {
-            button.style.display = "none";
+            pageButton.className = `page ${currentPage === i ? 'ativa' : ''}`;
+        }
+        pageButton.textContent = i;
+
+        pageButton.addEventListener("click", () => {
+            currentPage = i;
+            renderPage();
+            updatePagination();
+        });
+
+        pagination.appendChild(pageButton);
+    }
+
+    const prevControl = document.createElement("div");
+    prevControl.className = "control prev";
+    prevControl.innerHTML = `<img src="assets/images/direita.png">`;
+    pagination.appendChild(prevControl);
+
+    pagination.querySelector(".control.next").addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPage();
+            updatePagination();
+        }
+    });
+
+    pagination.querySelector(".control.prev").addEventListener("click", () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderPage();
+            updatePagination();
         }
     });
 }
 
-// Função de pesquisa modificada
-function handleSearch() {
-    const searchTerm = document.querySelector("#barraPesquisa").value.toLowerCase();
-    
-    // Filtra todos os experimentos, não apenas os da página atual
-    filteredExperiments = infoexperiments.filter(experiment => 
-        experiment.nome.toLowerCase().includes(searchTerm)
+searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    filteredExperiments = infoexperiments.filter(exp => 
+        exp.nome.toLowerCase().includes(searchTerm)
     );
 
-    // Volta para a primeira página após pesquisar
     currentPage = 1;
-    renderPage(currentPage);
-}
-
-// Event listeners
-document.querySelector(".control.next").addEventListener("click", () => {
-    if (currentPage > 1) {
-        currentPage--;
-        renderPage(currentPage);
-    }
+    renderPage();
+    updatePagination();
 });
 
-document.querySelector(".control.prev").addEventListener("click", () => {
-    if (currentPage < totalPages) {
-        currentPage++;
-        renderPage(currentPage);
-    }
-});
-
-document.querySelectorAll(".pagination .page, .pagination .lastpage").forEach((button, index) => {
-    button.addEventListener("click", () => {
-        currentPage = index + 1;
-        renderPage(currentPage);
-    });
-});
-
-document.querySelector("#barraPesquisa").addEventListener("keyup", handleSearch);
-
-// Inicialização
 window.addEventListener("DOMContentLoaded", () => {
-    renderPage(currentPage);
+    renderPage();
     updatePagination();
 });
