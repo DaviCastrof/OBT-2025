@@ -336,6 +336,23 @@ main {
     color: rgb(255, 255, 255);
 }
 
+.lista {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.lista input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.lista label {
+    cursor: pointer;
+    user-select: none;
+}
 
 footer {
     height: 3vh;
