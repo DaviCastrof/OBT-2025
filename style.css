@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    background-image: url(imagens/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+header{
+    background-color: #475569;
+    padding: 1px;
+    width: 100%;
+} 
+
+.irculo {
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.pesquisar {
+    display: flex;
+    align-items: center;
+    background-color: #334155;
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+#barraPesquisa {
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+}
+
+.barraPesquisa label {
+    height: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 30px;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.caixa {
+    width: 350px;
+    height: 250px;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.texto {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;       
+    margin-top: 20px;   
+}
+
+.pagination {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0;
+    gap: 5px;
+}
+
+.pagination .page {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3;
+    -webkit-transition: .3s;
+    -moz-transition: .3;
+    -ms-transition: .3;
+    -o-transition: .3;
+}
+
+.pagination .page:hover{
+    background-color: rgb(168, 165, 170);
+}
+.pagination .page.ativa{
+    background-color: #b6b8b9;
+    color: rgb(0, 0, 0);
+}
+
+.pagination .control {
+    color: #4a5866;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pagination .control img{
+    width: 20px;
+    height: 20px;
+}
+
+.pagination .control:hover {
+    color: rgb(10, 10, 10);
+}
+
+.pagination .control .prev {
+    margin-right: 10px;
+}
+
+.pagination .control .next {
+    margin-left: 10px;
+}
+
+footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
